@@ -7,7 +7,7 @@ def randomization(n):
     Returns:
       A - a randomly-generated nx1 Numpy array.
     """
-    #Your code here
+    
     if n>0 and type(n)==int:
         A=np.random.rand(n,1)
     return A
@@ -31,7 +31,7 @@ def operations(h, w):
       B - a randomly-generated h x w Numpy array.
       s - the sum of A and B.
     """
-    #Your code here
+    
      A= np.random.random([h,w]) 
     B=np.random.random([h,w])
     S=A+B
@@ -58,7 +58,7 @@ def norm(A, B):
     Returns:
       s - the L2 norm of A+B.
     """
-    #Your code here
+   
     s = np.linalg.norm(A + B)
     return s
 A = np.random.random([5,])
@@ -78,7 +78,7 @@ def neural_network(inputs, weights):
      Returns (in this order):
        out - a 1 x 1 NumPy array, representing the output of the neural network
     """
-    #Your code here
+    
     product=np.matmul(weights.transpose(),inputs)
     out=np.tanh(product)
     return out
@@ -88,7 +88,7 @@ def scalar_function(x, y):
     """
     Returns the f(x,y) defined in the problem statement.
     """
-    #Your code here
+    
     if x<=y:
         return x*y
     else: 
@@ -98,7 +98,7 @@ def vector_function(x, y):
     """
     Make sure vector_function can deal with vector input x,y 
     """
-    #Your code here
+    
     vectorized = np.vectorize(scalar_function)
     return vectorized(x,y)
 
